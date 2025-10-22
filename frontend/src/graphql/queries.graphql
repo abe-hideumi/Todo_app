@@ -1,0 +1,23 @@
+query GetTodos {
+	todos {
+		id
+		title
+		description
+		status
+		dueDate
+		createdAt
+		updatedAt
+	}
+}
+
+query GetTodo($id: ID!) {
+	todo(id: $id) {
+		id
+		title
+		description
+		status
+		dueDate
+		createdAt
+		updatedAt
+	}
+}
