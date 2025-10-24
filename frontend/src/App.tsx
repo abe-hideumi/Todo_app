@@ -6,8 +6,6 @@ import './App.css';
 function App() {
 	const { data, loading, error , refetch} = useGetTodosQuery();
 
-	console.log('App data:', data);
-
 	if (loading)
 		return <div className='loading'>Loading...</div>;
 	if (error)
@@ -28,13 +26,3 @@ function App() {
 }
 
 export default App
-
-		{/* <h1>Todo App</h1>
-		<h2>Todos ({data?.todos.length || 0})</h2>
-		<ul>
-			{data?.todos.map((todo) => (
-			<li key={todo.id}>
-				<strong>{todo.title}</strong> - {todo.status}
-			</li>
-			))}
-		</ul> */}

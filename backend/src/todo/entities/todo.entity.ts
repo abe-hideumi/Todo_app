@@ -1,11 +1,9 @@
 import { ObjectType, Field, ID, registerEnumType } from '@nestjs/graphql';
 import { TodoStatus as PrismaTodoStatus } from '@prisma/client';
 
-// PrismaのEnumをそのまま使う
 export const TodoStatus = PrismaTodoStatus;
 export type TodoStatus = PrismaTodoStatus;
 
-// GraphQLでEnumを使えるように登録
 registerEnumType(TodoStatus, {
 	name: 'TodoStatus',
 	description: 'Todoのステータス',

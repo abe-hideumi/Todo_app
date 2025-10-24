@@ -16,8 +16,7 @@ function TodoForm({ onSuccess }: TodoFormProps) {
 		if (!title.trim()) return;
 
 		try {
-			console.log('Submitting todo with title:', title.trim());
-			const result = await createTodo({
+			await createTodo({
 				variables: {
 					createTodoInput: {
 						title: title.trim(),
@@ -25,7 +24,6 @@ function TodoForm({ onSuccess }: TodoFormProps) {
 					},
 				},
 			});
-			console.log('Create todo result:', result);
 			setTitle('');
 			onSuccess();
 		} catch (error) {
