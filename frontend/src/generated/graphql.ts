@@ -141,7 +141,8 @@ export type CreateTodoMutationFn = Apollo.MutationFunction<CreateTodoMutation, C
  * - A mutate function that you can call at any time to execute the mutation
  * - An object with fields that represent the current status of the mutation's execution
  *
- * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https:
+ * www.apollographql.com/docs/react/api/react-hooks/#options-2;
  *
  * @example
  * const [createTodoMutation, { data, loading, error }] = useCreateTodoMutation({
